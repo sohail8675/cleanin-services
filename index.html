@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cleanin services | Premium Tank Cleaning Services</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Floating Admin & Partner Buttons (Left Side) -->
+    <div class="floating-login-panel">
+        <a href="#" onclick="router('admin-panel')" class="glow-btn">
+            <i class="fa-solid fa-user-tie"></i> Admin Login
+        </a>
+        <a href="#" onclick="router('partner-panel')" class="glow-btn">
+            <i class="fa-solid fa-handshake"></i> Partner Login
+        </a>
+    </div>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="logo">Cleanin services</div>
+        <div class="menu-toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+        <ul class="nav-list" id="nav-list">
+            <li><a href="#" onclick="router('home')">Home</a></li>
+            <li><a href="#" onclick="router('about')">About</a></li>
+            <li><a href="#" onclick="router('services')">Services</a></li>
+            <li><a href="#" onclick="router('equipment')">Equipment</a></li>
+            <li><a href="#" onclick="router('contact')">Contact</a></li>
+            <li><a href="#" class="btn-nav" onclick="router('booking')">Book Now</a></li>
+        </ul>
+    </nav>
+
+    <!-- Slide-out Menu Overlay -->
+    <div class="menu-overlay" id="menu-overlay"></div>
+
+    <!-- Main Content Area -->
+    <main id="app-container">
+        
+        <!-- HOME PAGE -->
+        <section id="home" class="page-section active">
+            <header class="hero">
+                <div class="hero-overlay"></div>
+                <div class="hero-content">
+                    <h1>Complete Clean.<br>Healthy Living.</h1>
+                    <p>Experience superior hygiene with our complete cleaning solutions.</p>
+                    <button class="btn-primary" onclick="router('booking')">Book an Appointment</button>
+                </div>
+                <div class="wave-bottom">
+                    <svg viewBox="0 0 1440 320"><path fill="#f4f8fb" fill-opacity="1" d="M0,224L48,213.3C96,203,192,181,288,181.3C384,181,480,203,576,224C672,245,768,267,864,250.7C960,235,1056,181,1152,165.3C1248,149,1344,171,1392,181.3L1440,192L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>
+                </div>
+            </header>
+
+            <section class="why-choose-us container">
+                <h2 class="section-title">Why Choose Cleanin services</h2>
+                               <div class="features-grid">
+                    <!-- Point 1 -->
+                    <div class="feature-card mini-card">
+                        <i class="fa-solid fa-shield-virus"></i>
+                        <h3>Safe & Hygienic Cleaning</h3>
+                    </div>
+                    <!-- Point 2 -->
+                    <div class="feature-card mini-card">
+                        <i class="fa-solid fa-stopwatch"></i>
+                        <h3>Quick & Efficient Service</h3>
+                    </div>
+                    <!-- Point 3 -->
+                    <div class="feature-card mini-card">
+                        <i class="fa-solid fa-hourglass-half"></i>
+                        <h3>Save Time. Live Better</h3>
+                    </div>
+                    <!-- Point 4 -->
+                    <div class="feature-card mini-card">
+                        <i class="fa-solid fa-user-shield"></i>
+                        <h3>Your Safety, Our Priority</h3>
+                    </div>
+                    <!-- Point 5 -->
+                    <div class="feature-card mini-card">
+                        <i class="fa-solid fa-bolt"></i>
+                        <h3>Fast Cleaning, Zero Compromise</h3>
+                    </div>
+                    <!-- Point 6 -->
+                    <div class="feature-card mini-card">
+                        <i class="fa-solid fa-hand-sparkles"></i>
+                        <h3>100% Germ-Free Guaranteed</h3>
+                    </div>
+                    <!-- Point 7 -->
+                    <div class="feature-card mini-card">
+                        <i class="fa-solid fa-clock-rotate-left"></i>
+                        <h3>On-Time Service, Every Time</h3>
+                    </div>
+                    <!-- Point 8 (Added by me for balance) -->
+                    <div class="feature-card mini-card">
+                        <i class="fa-solid fa-leaf"></i>
+                        <h3>Eco-Friendly Process</h3>
+                    </div>
+                </div>
+                    <div class="feature-card">
+                        <i class="fa-solid fa-user-clock"></i>
+                        <h3>Time Efficient</h3>
+                        <p>Complete cleaning in under 60 minutes using high-pressure German machinery.</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fa-solid fa-user-astronaut"></i>
+                        <h3>Trained Experts</h3>
+                        <p>Our staff is medically checked, insured, and trained in safety protocols.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="proof container">
+                <h2 class="section-title">Visual Proof</h2>
+                <div class="comparison-gallery">
+                    <div class="compare-card">
+                        <div class="img-wrapper"><img src="https://images.unsplash.com/photo-1584627147104-f5197bcd6651?auto=format&fit=crop&q=80&w=600" alt="Dirty Tank"></div>
+                        <span>Before</span>
+                    </div>
+                    <div class="compare-card">
+                        <div class="img-wrapper"><img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=600" alt="Clean Tank"></div>
+                        <span>After</span>
+                    </div>
+                </div>
+            </section>
+        </section>
+
+        <!-- ABOUT PAGE -->
+        <section id="about" class="page-section">
+            <div class="page-header">
+                <h1>About Us</h1>
+                <p>Restoring Purity, One Tank at a Time.</p>
+            </div>
+            <div class="container content-block">
+                <p class="lead-text">Cleanin services was founded on a simple premise: Clean water is not a luxury; it is a fundamental right. With over a decade of experience, we have revolutionized the water tank cleaning industry by replacing manual, unhygienic methods with state-of-the-art automation.</p>
+                <p>We are ISO 9001:2015 certified and serve residential complexes, corporate parks, and industrial units. Our commitment goes beyond cleaning; we provide comprehensive water storage health assessments to ensure your family and employees are safe from waterborne diseases.</p>
+            </div>
+        </section>
+
+        <!-- SERVICES PAGE -->
+        <section id="services" class="page-section">
+            <div class="page-header">
+                <h1>Our Services</h1>
+                <p>Comprehensive solutions for every type of water storage system.</p>
+            </div>
+            <div class="container">
+                <div class="services-grid" id="services-grid">
+                    <!-- Javascript will inject service cards here -->
+                </div>
+            </div>
+        </section>
+
+        <!-- EQUIPMENT PAGE -->
+        <section id="equipment" class="page-section">
+            <div class="page-header">
+                <h1>Technology & Equipment</h1>
+                <p>We use world-class machinery to deliver superior results.</p>
+            </div>
+            <div class="container equipment-layout">
+                <div class="equip-card">
+                    <img src="https://images.unsplash.com/photo-1585739343360-316563d76343?auto=format&fit=crop&q=80&w=600" alt="High Pressure Jet">
+                    <div class="equip-info">
+                        <h3>High-Pressure Jet Cleaners</h3>
+                        <p>Delivers 150-bar pressure to remove calcified layers and stubborn algae from tank walls without damaging the structure.</p>
+                    </div>
+                </div>
+                <div class="equip-card">
+                    <img src="https://images.unsplash.com/photo-1517646287270-a5a9ca602e5c?auto=format&fit=crop&q=80&w=600" alt="Vacuum Pump">
+                    <div class="equip-info">
+                        <h3>Industrial Sludge Vacuum</h3>
+                        <p>Powerful suction pumps that remove sludge and sediment from the tank floor instantly, ensuring no residue is left behind.</p>
+                    </div>
+                </div>
+                <div class="equip-card">
+                    <img src="https://plus.unsplash.com/premium_photo-1664298135546-2495b2713606?auto=format&fit=crop&q=80&w=600" alt="UV Light">
+                    <div class="equip-info">
+                        <h3>UV-C Disinfection Lamps</h3>
+                        <p>Medical-grade UV radiation treatment to kill 99.9% of bacteria and viruses post-cleaning.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- BOOKING PAGE (Fixed Layout) -->
+        <section id="booking" class="page-section">
+            <div class="page-header">
+                <h1>Book Your Service</h1>
+                <p>Schedule a professional cleaning in under 2 minutes.</p>
+            </div>
+            <div class="container booking-container">
+                <form id="booking-form" class="booking-form">
+                    
+                    <!-- Name & Phone -->
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Full Name</label>
+                            <input type="text" id="cust-name" placeholder="Enter your name" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Phone Number</label>
+                            <input type="tel" id="cust-phone" placeholder="+91 98765 43210" required>
+                        </div>
+                    </div>
+
+                    <!-- Address & Location -->
+                    <div class="form-group">
+                        <label>Service Address</label>
+                        <textarea id="cust-address" rows="2" placeholder="Flat No, Building, Street, City" required></textarea>
+                        <button type="button" class="btn-location"><i class="fa-solid fa-location-crosshairs"></i> Use Current Location</button>
+                    </div>
+
+                    <!-- Service Selection (Dropdown) -->
+                    <div class="form-group">
+                        <label>Select Service</label>
+                                               <label>Select Service</label>
+                        <!-- Naya Custom Dropdown -->
+                        <div class="custom-dropdown" id="custom-dropdown">
+                            <div class="selected-option" id="selected-option">
+                                <span>-- Click to Choose Service --</span>
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </div>
+                            <div class="options-list" id="options-list">
+                                <!-- JavaScript yahan automatically photos aur naam bharega -->
+                            </div>
+                        </div>
+                        <!-- Yeh hidden input form submit karne ke liye zaroori hai -->
+                        <input type="hidden" id="service-select" required>
+                            <option value="">-- Click to Choose Service --</option>
+                            <!-- JS will fill this automatically -->
+                        </select>
+                    </div>
+
+                    <!-- Capacity & Date -->
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Tank Capacity</label>
+                          <select id="tank-cap" required>
+    <option value="500 Litres">500 Litres</option>
+    <option value="1000 Litres">1000 Litres</option>
+    <option value="1500 Litres">1500 Litres</option>
+    <option value="2000 Litres">2000 Litres</option>
+    <option value="2500 Litres">2500 Litres</option>
+    <option value="3000+ Litres">3000+ Litres</option>
+</select>
+                        </div>
+                        <div class="form-group">
+                            <label>Preferred Date</label>
+                            <input type="date" id="service-date" required>
+                        </div>
+                    </div>
+
+                    <!-- Time Slot -->
+                    <div class="form-group">
+                        <label>Preferred Time</label>
+                        <select id="service-time" required>
+                            <option value="Morning">Morning (8 AM - 12 PM)</option>
+                            <option value="Afternoon">Afternoon (12 PM - 4 PM)</option>
+                            <option value="Evening">Evening (4 PM - 8 PM)</option>
+                        </select>
+                    </div>
+
+                    <!-- GLOWING SUBMIT BUTTON -->
+                    <button type="submit" class="btn-submit glow-submit">
+                        CONFIRM BOOKING <i class="fa-solid fa-check-circle"></i>
+                    </button>
+
+                </form>
+            </div>
+        </section>>
+        </section>
+
+<!-- BOOKING PREVIEW PAGE (NEW) -->
+<section id="booking-preview" class="page-section">
+    <div class="page-header">
+        <h1>📋 Booking Summary</h1>
+        <p>Please review your details before confirming</p>
+    </div>
+    <div class="container booking-container">
+        <div class="preview-card">
+            <h2>Your Booking Details</h2>
+            
+            <div class="preview-row">
+                <span class="preview-label"><i class="fa-solid fa-user"></i> Name:</span>
+                <span class="preview-value" id="preview-name">-</span>
+            </div>
+            
+            <div class="preview-row">
+                <span class="preview-label"><i class="fa-solid fa-phone"></i> Phone:</span>
+                <span class="preview-value" id="preview-phone">-</span>
+            </div>
+            
+            <div class="preview-row">
+                <span class="preview-label"><i class="fa-solid fa-location-dot"></i> Address:</span>
+                <span class="preview-value" id="preview-address">-</span>
+            </div>
+            
+            <div class="preview-row">
+                <span class="preview-label"><i class="fa-solid fa-broom"></i> Service:</span>
+                <span class="preview-value" id="preview-service">-</span>
+            </div>
+            
+            <div class="preview-row">
+                <span class="preview-label"><i class="fa-solid fa-droplet"></i> Tank Capacity:</span>
+                <span class="preview-value" id="preview-capacity">-</span>
+            </div>
+            
+            <div class="preview-row">
+                <span class="preview-label"><i class="fa-solid fa-calendar"></i> Date:</span>
+                <span class="preview-value" id="preview-date">-</span>
+            </div>
+            
+            <div class="preview-row">
+                <span class="preview-label"><i class="fa-solid fa-clock"></i> Time:</span>
+                <span class="preview-value" id="preview-time">-</span>
+            </div>
+            
+            <div class="preview-buttons">
+                <button class="btn-edit" onclick="router('booking')">
+                    <i class="fa-solid fa-pen"></i> Edit Details
+                </button>
+                <button class="btn-final-confirm" id="final-confirm-btn">
+                    <i class="fa-solid fa-check-circle"></i> CONFIRM BOOKING
+                </button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CONGRATULATIONS POPUP (NEW) -->
+<div class="congrats-overlay" id="congrats-popup">
+    <div class="confetti-container">
+        <div class="confetti"></div>
+        <div class="confetti"></div>
+        <div class="confetti"></div>
+        <div class="confetti"></div>
+        <div class="confetti"></div>
+        <div class="confetti"></div>
+        <div class="confetti"></div>
+        <div class="confetti"></div>
+        <div class="confetti"></div>
+        <div class="confetti"></div>
+        <div class="confetti"></div>
+        <div class="confetti"></div>
+        <div class="confetti"></div>
+        <div class="confetti"></div>
+        <div class="confetti"></div>
+        <div class="confetti"></div>
+        <div class="confetti"></div>
+        <div class="confetti"></div>
+        <div class="confetti"></div>
+        <div class="confetti"></div>
+    </div>
+    <div class="congrats-box">
+        <div class="congrats-icon">🎉</div>
+        <h1>CONGRATULATIONS!</h1>
+        <h2>Booking Confirmed</h2>
+        <p>Your service has been successfully booked.</p>
+        <p class="booking-id-display">Booking ID: <span id="display-booking-id">BK-0000</span></p>
+        <button class="btn-go-home" onclick="closeCongratsPopup()">
+            <i class="fa-solid fa-house"></i> Go to Home
+        </button>
+    </div>
+</div>
+
+<!-- CONTACT PAGE -->
+
+        <!-- ADMIN & PARTNER DASHBOARDS (Hidden by default, accessible via footer links) -->
+        <section id="admin-panel" class="page-section">
+            <div class="page-header admin-header">
+                <h1>Admin Dashboard</h1>
+            </div>
+            <div class="container dashboard-container">
+                <div class="stats-row">
+                    <div class="stat-box"><h3>Upcoming</h3><span id="stat-upcoming">0</span></div>
+                    <div class="stat-box"><h3>Ongoing</h3><span id="stat-ongoing">0</span></div>
+                    <div class="stat-box"><h3>Completed</h3><span id="stat-completed">0</span></div>
+                </div>
+                <div class="table-responsive">
+                    <table class="dashboard-table">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Customer</th>
+                                <th>Date</th>
+                                <th>Type</th>
+                                <th>Status</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody id="admin-booking-list">
+                            <!-- Injected by JS -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <section id="partner-panel" class="page-section">
+            <div class="page-header partner-header">
+                <h1>Partner Interface</h1>
+            </div>
+            <div class="container dashboard-container">
+                <h2>Your Assigned Jobs</h2>
+                <div class="job-cards-list" id="partner-job-list">
+                    <!-- Injected by JS -->
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-logo">Cleanin services</div>
+            
+            <p>&copy; 2026 Cleanin services. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
