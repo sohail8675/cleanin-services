@@ -1,22 +1,12 @@
 /* --- Data Configuration --- */
+/* --- Data Configuration --- */
 const servicesData = [
-    { title: "Overhead Tank Cleaning", img: "https://images.unsplash.com/photo-1590502160462-236b33036666?w=600", price: "From $30", desc: "Complete sludge removal and high-pressure washing for rooftop tanks." },
-    { title: "Underground Sump Cleaning", img: "https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?w=600", price: "From 500/-", desc: "Mechanized de-watering and anti-bacterial treatment for large sumps." },
-    { title: "Pipeline Disinfection", img: "https://images.unsplash.com/photo-1621905251189-08b95d63329f?w=600", price: "From $20", desc: "Chemical flushing of household pipes to remove blockages and bacteria." },
-    { title: "Industrial Tank Cleaning", img: "https://images.unsplash.com/photo-1518640467707-6811f4a6ab73?w=600", price: "Custom Quote", desc: "Heavy-duty cleaning for factories and large storage units." },
-    { title: "PVC Tank Treatment", img: "https://images.unsplash.com/photo-1542013936693-884638332954?w=600", price: "From $25", desc: "Gentle yet effective cleaning specifically for Sintex/PVC surfaces." },
-    { title: "Concrete Tank Repair", img: "https://images.unsplash.com/photo-1592833159155-c62df1b65634?w=600", price: "From $100", desc: "Fixing cracks and waterproofing leaks in concrete storage structures." },
-    { title: "UV Sterilization", img: "https://images.unsplash.com/photo-1632762343774-4b5343d2c709?w=600", price: "Add-on $15", desc: "Post-cleaning radiation treatment to kill 99.9% of viruses." },
-    { title: "Sludge & Mud Removal", img: "https://images.unsplash.com/photo-1616401784845-180882ba9ba8?w=600", price: "From $40", desc: "Vacuum extraction of deep-seated mud from tank floors." },
-    { title: "Rainwater Harvesting Tank", img: "https://images.unsplash.com/photo-1518112390430-f4ab02e9c2c8?w=600", price: "From $60", desc: "Specialized filtration cleaning for rainwater collection systems." },
-    { title: "Swimming Pool Cleaning", img: "https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?w=600", price: "From $150", desc: "Algae removal, pH balancing, and tile scrubbing for pools." },
-    { title: "Valve Replacement", img: "https://images.unsplash.com/photo-1542013936693-884638332954?w=600", price: "Material + $10", desc: "Replacing rusted or broken outflow/inflow valves." },
-    { title: "Emergency Drain Service", img: "https://images.unsplash.com/photo-1605615795499-d4c82c3dc855?w=600", price: "From $80", desc: "Rapid response team for contaminated water emergencies." },
-    { title: "Commercial Loft Tanks", img: "https://images.unsplash.com/photo-1587440871875-191322ee64b0?w=600", price: "From $25", desc: "Cleaning for small loft tanks in commercial offices." },
-    { title: "Solar Panel Washing", img: "https://images.unsplash.com/photo-1509391366360-2e959784a276?w=600", price: "From $5/panel", desc: "Increase efficiency by removing dust from solar panels." },
-    { title: "Chlorination Treatment", img: "https://images.unsplash.com/photo-1607613009820-a29f7bb6dc82?w=600", price: "Add-on $10", desc: "Scientific dosing of chlorine to maintain water potability." }
+    { title: "Intense cleaning (2 bathrooms)", img: "https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=600", rating: "4.80", price: "₹979", oldPrice: "₹1,058" },
+    { title: "Insta Help", img: "https://images.unsplash.com/photo-1556911220-bff31c812dba?w=600", rating: "4.69", price: "₹99", oldPrice: "₹245" },
+    { title: "Intense cleaning (3 bathrooms)", img: "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?w=600", rating: "4.80", price: "₹1,429", oldPrice: "₹1,587" },
+    { title: "Foam-jet service (2 ACs)", img: "https://images.unsplash.com/photo-1621905251189-08b95d63329f?w=600", rating: "4.76", price: "₹1,098", oldPrice: "₹1,190" },
+    { title: "Plumber consultation", img: "https://images.unsplash.com/photo-1621905251189-08b95d63329f?w=600", rating: "4.73", price: "₹49", oldPrice: "" }
 ];
-
 /* --- System State Management --- */
 let bookings = JSON.parse(localStorage.getItem('Cleanin_bookings')) || [];
 /* --- Smart Booking ID Generator --- */
@@ -76,7 +66,7 @@ function router(pageId) {
 /* --- Initialization --- */
 document.addEventListener('DOMContentLoaded', () => {
     
-    // 1. Render Services on Services Page
+// 1. Render Services on Services Page
     const serviceGrid = document.getElementById('services-grid');
     if(serviceGrid) {
         servicesData.forEach(service => {
@@ -86,8 +76,11 @@ document.addEventListener('DOMContentLoaded', () => {
                 <img src="${service.img}" class="service-img" alt="${service.title}">
                 <div class="service-content">
                     <h3>${service.title}</h3>
-                    <p>${service.desc}</p>
-                    <span class="price-tag">${service.price}</span>
+                    <div class="rating"><i class="fa-solid fa-star"></i> ${service.rating}</div>
+                    <div class="price-box">
+                        <span class="price">${service.price}</span>
+                        <span class="old-price">${service.oldPrice}</span>
+                    </div>
                 </div>
             `;
             serviceGrid.appendChild(card);

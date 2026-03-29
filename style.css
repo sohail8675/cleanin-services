@@ -170,17 +170,25 @@ body {
 }
 /* --- Services Grid --- */
 .services-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    gap: 30px;
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    padding-bottom: 20px;
+    scroll-snap-type: x mandatory;
+}
+.services-grid::-webkit-scrollbar {
+    display: none;
 }
 .service-card {
-    background: var(--white);
-    border-radius: 10px;
+    flex: 0 0 240px;
+    background: #fff;
+    border-radius: 12px;
     overflow: hidden;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-    transition: transform 0.3s ease;
-    border: 1px solid #eee;
+    scroll-snap-align: start;
+}
+.service-card:hover {
+    transform: none;
+    box-shadow: none;
 }
 .service-card:hover {
     transform: translateY(-10px);
@@ -190,9 +198,16 @@ body {
     height: 180px;
     width: 100%;
     object-fit: cover;
+    border-radius: 12px;
 }
 .service-content {
-    padding: 20px;
+    padding: 12px 5px;
+}
+.service-content h3 {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #000;
+    margin-bottom: 5px;
 }
 .service-content h3 {
     color: var(--primary-blue);
@@ -204,11 +219,29 @@ body {
     color: #666;
     margin-bottom: 15px;
 }
-.price-tag {
+.rating {
+    font-size: 0.9rem;
+    color: #000;
+    margin-bottom: 8px;
+}
+.rating i {
+    color: #f59e0b;
+    font-size: 0.85rem;
+}
+.price-box {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.price {
     font-weight: 600;
-    color: var(--accent-blue);
-    display: block;
-    margin-top: auto;
+    font-size: 1rem;
+    color: #000;
+}
+.old-price {
+    font-size: 0.9rem;
+    color: #888;
+    text-decoration: line-through;
 }
 /* --- Updated Features Section (Small Boxes) --- */
 .features-grid {
