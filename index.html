@@ -97,29 +97,50 @@
     </div>
 </header>
 
-<!-- STATS COUNTER SECTION (NEW) -->
+<!-- STATS COUNTER SECTION (UPDATED WITH NEW CARDS) -->
 <section class="stats-section">
     <div class="stats-container">
+        
+        <!-- Card 1: 100% Cleaning Satisfaction -->
         <div class="stat-item">
-            <div class="stat-icon"><i class="fa-solid fa-building"></i></div>
-            <div class="stat-number" data-target="500">0</div>
-            <div class="stat-label">Projects Completed</div>
+            <div class="stat-icon"><i class="fa-solid fa-hand-sparkles"></i></div>
+            <div style="display:flex; justify-content:center; align-items:baseline;">
+                <div class="stat-number" data-target="100">0</div>
+                <span style="font-size: 2rem; font-weight: 700; color: #0a192f; margin-left: 2px;">%</span>
+            </div>
+            <div class="stat-label">Cleaning Satisfaction</div>
         </div>
+        
+        <!-- Card 2: 0% Germs/Dirt Left Behind -->
         <div class="stat-item">
-            <div class="stat-icon"><i class="fa-solid fa-users"></i></div>
-            <div class="stat-number" data-target="10000">0</div>
-            <div class="stat-label">Happy Customers</div>
+            <div class="stat-icon"><i class="fa-solid fa-virus-slash"></i></div>
+            <div style="display:flex; justify-content:center; align-items:baseline;">
+                <div class="stat-number" data-target="0">0</div>
+                <span style="font-size: 2rem; font-weight: 700; color: #0a192f; margin-left: 2px;">%</span>
+            </div>
+            <div class="stat-label">Germs & Dirt Left Behind</div>
         </div>
+        
+        <!-- Card 3: 24/7 Booking Service -->
         <div class="stat-item">
-            <div class="stat-icon"><i class="fa-solid fa-calendar"></i></div>
-            <div class="stat-number" data-target="15">0</div>
-            <div class="stat-label">Years Experience</div>
+            <div class="stat-icon"><i class="fa-solid fa-headset"></i></div>
+            <div style="display:flex; justify-content:center; align-items:baseline;">
+                <div class="stat-number" data-target="24">0</div>
+                <span style="font-size: 2rem; font-weight: 700; color: #0a192f; margin-left: 2px;">/7</span>
+            </div>
+            <div class="stat-label">Booking Service</div>
         </div>
+        
+        <!-- Card 4: #1 Customer Satisfaction -->
         <div class="stat-item">
-            <div class="stat-icon"><i class="fa-solid fa-city"></i></div>
-            <div class="stat-number" data-target="50">0</div>
-            <div class="stat-label">Cities Covered</div>
+            <div class="stat-icon"><i class="fa-solid fa-trophy"></i></div>
+            <div style="display:flex; justify-content:center; align-items:baseline;">
+                <span style="font-size: 2rem; font-weight: 700; color: #0a192f; margin-right: 6px;">#</span>
+                <div class="stat-number" data-target="1">0</div>
+            </div>
+            <div class="stat-label">Customer Satisfaction</div>
         </div>
+        
     </div>
 </section>
 
@@ -738,7 +759,22 @@
                 </div>
             </div>
         </section>
-
+        <!-- SERVICE DETAIL PAGE (NEW) -->
+        <section id="service-detail" class="page-section">
+            <div class="page-header">
+                <h1>Service Details</h1>
+                <p>Everything you need to know about this service</p>
+            </div>
+            <div class="container detail-container">
+                <button class="btn-back" onclick="router('services')">
+                    <i class="fa-solid fa-arrow-left"></i> Back to Services
+                </button>
+                
+                <div class="detail-card" id="detail-card-content">
+                    <!-- JavaScript yahan automatically photo aur details bharega -->
+                </div>
+            </div>
+        </section>
         <!-- BOOKING PAGE (Fixed Layout) -->
         <section id="booking" class="page-section">
             <div class="page-header">

@@ -69,9 +69,16 @@ document.addEventListener('DOMContentLoaded', () => {
 // 1. Render Services on Services Page
     const serviceGrid = document.getElementById('services-grid');
     if(serviceGrid) {
-        servicesData.forEach(service => {
+              servicesData.forEach(service => {
             const card = document.createElement('div');
             card.className = 'service-card';
+            card.style.cursor = 'pointer'; // Hath wala icon aayega
+            
+            // JAB CARD PE CLICK HO
+            card.addEventListener('click', () => {
+                openServiceDetail(service);
+            });
+
             card.innerHTML = `
                 <img src="${service.img}" class="service-img" alt="${service.title}">
                 <div class="service-content">
@@ -441,4 +448,80 @@ if (statsSection) {
     }, { threshold: 0.5 });
     
     observer.observe(statsSection);
+}// ==========================================
+// NEW: SERVICE DETAIL & AUTO-SELECT LOGIC
+// ==========================================
+
+// 1. Service Detail Page Kholne ka logic
+function openServiceDetail(service) {
+    const detailContainer = document.getElementById('detail-card-content');
+    if(!detailContainer) return;
+    
+    // Dummy Content jo aap baad mein edit kar sakte ho
+    const dummyDesc = "This is a premium service designed to give you the best experience. Our highly trained professionals use state-of-the-art equipment and eco-friendly chemicals to ensure 100% hygiene and safety. We understand the importance of a clean environment, which is why we leave no stone unturned in delivering top-notch quality. Sit back and relax while we do the hard work for you!";
+    
+    // Page ke andar HTML banana
+    detailContainer.innerHTML = `
+        <img src="${service.img}" class="detail-img" alt="${service.title}">
+        <div class="detail-info">
+            <div class="detail-header">
+                <div>
+                    <h2>${service.title}</h2>
+                    <div class="rating" style="font-size:1.1rem;"><i class="fa-solid fa-star" style="color:#f59e0b;"></i> ${service.rating} (500+ Verified Reviews)</div>
+                </div>
+                <div class="detail-price">
+                    ${service.price} 
+                    <small style="color:#888; text-decoration:line-through; font-size:1.1rem; font-weight:normal;">${service.oldPrice}</small>
+                </div>
+            </div>
+            
+            <p class="detail-desc">${dummyDesc}</p>
+            
+            <h3 style="color:var(--primary-blue);">What's Included in this Service:</h3>
+            <ul class="detail-features">
+                <li><i class="fa-solid fa-check"></i> High-quality cleaning by trained professionals</li>
+                <li><i class="fa-solid fa-check"></i> 100% Eco-friendly & safe chemicals used</li>
+                <li><i class="fa-solid fa-check"></i> Complete sanitization and hygiene check</li>
+                <li><i class="fa-solid fa-check"></i> Fast, reliable, and on-time service delivery</li>
+            </ul>
+            
+            <button class="btn-book-large" onclick="bookPreselectedService('${service.title}', '${service.price}', '${service.img}')">
+                <i class="fa-solid fa-calendar-check"></i> Book This Service Now
+            </button>
+        </div>
+    `;
+    
+    // Naya page open karna
+    router('service-detail');
+}
+
+// 2. Form mein auto-select karne ka logic
+function bookPreselectedService(title, price, img) {
+    // A. Pehle Booking page pe le jao
+    router('booking');
+    
+    // B. Dropdown mein photo aur naam change karo
+    const selectedOption = document.getElementById('selected-option');
+    const hiddenInput = document.getElementById('service-select');
+    
+    if(selectedOption && hiddenInput) {
+        selectedOption.innerHTML = `
+            <div class="selected-display">
+                <img src="${img}" alt="icon">
+                <span>${title} - ${price}</span>
+            </div>
+            <i class="fa-solid fa-check" style="color:green"></i>
+        `;
+        
+        // Form submit hone ke liye hidden input mein value daalo
+        hiddenInput.value = `${title} (${price})`;
+    }
+    
+    // C. Halka sa neche scroll karo taaki form samne dikhe
+    setTimeout(() => {
+        const bookingForm = document.getElementById('booking-form');
+        if(bookingForm) {
+            bookingForm.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+    }, 300);
 }
