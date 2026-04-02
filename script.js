@@ -8,7 +8,9 @@ const servicesData = [
     { title: "Plumber consultation", img: "https://images.unsplash.com/photo-1621905251189-08b95d63329f?w=600", rating: "4.73", price: "₹49", oldPrice: "" }
 ];
 /* --- System State Management --- */
-let bookings = JSON.parse(localStorage.getItem('Cleanin_bookings')) || [];
+let bookings = JSON.parse(localStorage.getItem('DUST_Out_bookings')) || [];
+
+
 /* --- Smart Booking ID Generator --- */
 function generateBookingId() {
     // Step 1: Aaj ki date lo
@@ -211,7 +213,8 @@ if(finalConfirmBtn) {
         if(pendingBooking) {
             // Save booking to localStorage
             bookings.push(pendingBooking);
-            localStorage.setItem('Cleanin_bookings', JSON.stringify(bookings));
+            localStorage.setItem('DUST_Out_bookings', JSON.stringify(bookings));
+
             
             // Show booking ID in popup
             document.getElementById('display-booking-id').textContent = pendingBooking.id;
@@ -325,7 +328,8 @@ function assignPartner(bookingId) {
     const index = bookings.findIndex(b => b.id === bookingId);
     if(index !== -1) {
         bookings[index].partnerAssigned = true; // Simulating assignment to logged in partner
-        localStorage.setItem('Cleanin_bookings', JSON.stringify(bookings));
+        localStorage.setItem('DUST_Out_bookings', JSON.stringify(bookings));
+
         renderAdminPanel();
         alert('Partner assigned successfully!');
     }
@@ -381,7 +385,11 @@ function updateStatus(id, newStatus) {
     const index = bookings.findIndex(b => b.id === id);
     if(index !== -1) {
         bookings[index].status = newStatus;
-        localStorage.setItem('Cleanin_bookings', JSON.stringify(bookings));
+        localStorage.setItem('DUST_Out_bookings', JSON.stringify(bookings));
+
+
+
+
         renderPartnerPanel();
     }
 }
