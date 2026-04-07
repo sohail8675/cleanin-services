@@ -16,7 +16,7 @@
         <a href="#" onclick="router('admin-panel')" class="glow-btn">
             <i class="fa-solid fa-user-tie"></i> Admin Login
         </a>
-        <a href="#" onclick="router('partner-panel')" class="glow-btn">
+        <a href="#" onclick="openAdminModal('partner-login-modal')" class="glow-btn">
             <i class="fa-solid fa-handshake"></i> Partner Login
         </a>
     </div>
@@ -55,8 +55,9 @@
     <div class="hero-container">
         <div class="hero-text">
             <span class="hero-badge">🏆 #1 Trusted Cleaning Service</span>
-            <h1>Professional Tank<br><span class="highlight">Cleaning Services</span></h1>
-            <p>We provide complete water tank cleaning, pipeline disinfection & maintenance services for residential, commercial & industrial sectors.</p>
+            <h1>We Handle the <span class="highlight">Dirty Work</span>So You Don't Have To</h1>
+            <p>We provide complete cleaning services and maintenance services for residential, commercial & industrial sectors.</p>
+<h2 class="hero-brand-name">Dust out.in</h2>
             <div class="hero-buttons">
                 <button class="btn-primary-uds" onclick="router('booking')">
                     <i class="fa-solid fa-calendar-check"></i> Book Now
@@ -80,20 +81,23 @@
                 </div>
             </div>
         </div>
-        <div class="hero-image">
-            <img src="logo.png" alt="DUST Out Professional Cleaning">
+       <div class="hero-image">
+   <img src="hero-cleaner.png.png" alt="DUST Out Professional Cleaner">
+              <!-- Box 1: Kadapa Coverage -->
             <div class="floating-card card-1">
-                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-location-dot"></i>
                 <div>
-                    <strong>4.9/5</strong>
-                    <small>Customer Rating</small>
+                    <strong>Serving All of Kadapa</strong>
+                    <small>Fast & reliable local experts</small>
                 </div>
             </div>
+            
+            <!-- Box 2: Satisfaction Guarantee -->
             <div class="floating-card card-2">
-                <i class="fa-solid fa-users"></i>
+                <i class="fa-solid fa-shield-halved"></i>
                 <div>
-                    <strong>10,000+</strong>
-                    <small>Happy Customers</small>
+                    <strong>Satisfaction Guaranteed</strong>
+                    <small>Quality cleaning you can trust</small>
                 </div>
             </div>
         </div>
@@ -146,257 +150,53 @@
         
     </div>
 </section>
-
-            <section class="why-choose-us container">
-<h2 class="section-title">Why Choose DUST Out</h2>                               <div class="features-grid">
-                    <!-- Point 1 -->
-                    <div class="feature-card mini-card">
-                        <i class="fa-solid fa-shield-virus"></i>
-                        <h3>Safe & Hygienic Cleaning</h3>
-                    </div>
-                    <!-- Point 2 -->
-                    <div class="feature-card mini-card">
-                        <i class="fa-solid fa-stopwatch"></i>
-                        <h3>Quick & Efficient Service</h3>
-                    </div>
-                    <!-- Point 3 -->
-                    <div class="feature-card mini-card">
-                        <i class="fa-solid fa-hourglass-half"></i>
-                        <h3>Save Time. Live Better</h3>
-                    </div>
-                    <!-- Point 4 -->
-                    <div class="feature-card mini-card">
-                        <i class="fa-solid fa-user-shield"></i>
-                        <h3>Your Safety, Our Priority</h3>
-                    </div>
-                    <!-- Point 5 -->
-                    <div class="feature-card mini-card">
-                        <i class="fa-solid fa-bolt"></i>
-                        <h3>Fast Cleaning, Zero Compromise</h3>
-                    </div>
-                    <!-- Point 6 -->
-                    <div class="feature-card mini-card">
-                        <i class="fa-solid fa-hand-sparkles"></i>
-                        <h3>100% Germ-Free Guaranteed</h3>
-                    </div>
-                    <!-- Point 7 -->
-                    <div class="feature-card mini-card">
-                        <i class="fa-solid fa-clock-rotate-left"></i>
-                        <h3>On-Time Service, Every Time</h3>
-                    </div>
-                    <!-- Point 8 (Added by me for balance) -->
-                    <div class="feature-card mini-card">
-                        <i class="fa-solid fa-leaf"></i>
-                        <h3>Eco-Friendly Process</h3>
-                    </div>
-                </div>
-            </section>
-            <!-- HOW IT WORKS SECTION (NEW) -->
-<section class="how-it-works">
-    <div class="container">
-        <h2 class="section-title">How It Works</h2> 
-            </div>
-            
-            <div class="step-arrow"><i class="fa-solid fa-arrow-right"></i></div>
-            
-            <div class="step-card">
-                <div class="step-number">2</div>
-                <div class="step-icon"><i class="fa-solid fa-phone"></i></div>
-                <h3>Confirmation Call</h3>
-                <p>Our team will call you to confirm the appointment</p>
-            </div>
-            
-            <div class="step-arrow"><i class="fa-solid fa-arrow-right"></i></div>
-            
-            <div class="step-card">
-                <div class="step-number">3</div>
-                <div class="step-icon"><i class="fa-solid fa-truck"></i></div>
-                <h3>Team Arrives</h3>
-                <p>Our trained professionals arrive at your location on time</p>
-            </div>
-            
-            <div class="step-arrow"><i class="fa-solid fa-arrow-right"></i></div>
-            
-            <div class="step-card">
-                <div class="step-number">4</div>
-                <div class="step-icon"><i class="fa-solid fa-check-circle"></i></div>
-                <h3>Job Done!</h3>
-                <p>Tank cleaned, sanitized and ready to use</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- TESTIMONIALS SECTION (NEW) -->
-<section class="testimonials-section">
-    <div class="container">
-        <h2 class="section-title">What Our Customers Say</h2>
-        <p class="section-subtitle">Real reviews from real customers</p>
-        
-        <div class="testimonials-grid">
-            <div class="testimonial-card">
-                <div class="stars">
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                </div>
-                <p class="review-text">"Excellent service! The team was professional, on-time, and did a thorough cleaning of our underground tank. Highly recommended!"</p>
-                <div class="reviewer">
-                    <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Customer">
-                    <div>
-                        <strong>Rajesh Kumar</strong>
-                        <span>Homeowner, Delhi</span>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="testimonial-card">
-                <div class="stars">
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                </div>
-                <p class="review-text">"We use Cleanin services for our apartment complex. They handle 20+ tanks and always deliver quality work. Very satisfied!"</p>
-                <div class="reviewer">
-                    <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Customer">
-                    <div>
-                        <strong>Priya Sharma</strong>
-                        <span>Society Secretary, Mumbai</span>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="testimonial-card">
-                <div class="stars">
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star-half-stroke"></i>
-                </div>
-                <p class="review-text">"Fast booking, reasonable prices, and excellent cleaning. The UV sanitization is a great add-on. Will definitely book again!"</p>
-                <div class="reviewer">
-                    <img src="https://randomuser.me/api/portraits/men/67.jpg" alt="Customer">
-                    <div>
-                        <strong>Amit Patel</strong>
-                        <span>Business Owner, Pune</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- FAQ SECTION (NEW) -->
-<section class="faq-section">
-    <div class="container">
-        <h2 class="section-title">Frequently Asked Questions</h2>
-        <p class="section-subtitle">Got questions? We've got answers!</p>
-        
-        <div class="faq-container">
-            <div class="faq-item">
-                <div class="faq-question">
-                    <span>How long does tank cleaning take?</span>
-                    <i class="fa-solid fa-chevron-down"></i>
-                </div>
-                <div class="faq-answer">
-                    <p>For residential tanks (500-2000 litres), cleaning takes about 45-60 minutes. For larger commercial or industrial tanks, it may take 2-3 hours depending on the size and condition.</p>
-                </div>
-            </div>
-            
-            <div class="faq-item">
-                <div class="faq-question">
-                    <span>Is the cleaning process safe?</span>
-                    <i class="fa-solid fa-chevron-down"></i>
-                </div>
-                <div class="faq-answer">
-                    <p>Yes, absolutely! We use food-grade, eco-friendly cleaning agents that are completely safe for drinking water. Our UV sterilization ensures 99.9% germ-free water.</p>
-                </div>
-            </div>
-            
-            <div class="faq-item">
-                <div class="faq-question">
-                    <span>How often should I clean my water tank?</span>
-                    <i class="fa-solid fa-chevron-down"></i>
-                </div>
-                <div class="faq-answer">
-                    <p>We recommend cleaning your water tank every 6 months for residential use. For commercial establishments, quarterly cleaning is advisable to maintain hygiene standards.</p>
-                </div>
-            </div>
-            
-            <div class="faq-item">
-                <div class="faq-question">
-                    <span>What payment methods do you accept?</span>
-                    <i class="fa-solid fa-chevron-down"></i>
-                </div>
-                <div class="faq-answer">
-                    <p>We accept all payment methods including Cash, UPI (GPay, PhonePe, Paytm), Credit/Debit Cards, and Bank Transfer. Payment is collected after service completion.</p>
-                </div>
-            </div>
-            
-            <div class="faq-item">
-                <div class="faq-question">
-                    <span>Do you provide service in my area?</span>
-                    <i class="fa-solid fa-chevron-down"></i>
-                </div>
-                <div class="faq-answer">
-                    <p>We currently serve 50+ cities across India. Enter your location during booking, and our system will confirm if we have coverage in your area.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- === YEH SAHI WALA CODE HAI (START) === -->
-
-<!-- HOW IT WORKS SECTION (NEW) -->
+<!-- HOW IT WORKS SECTION -->
 <section class="how-it-works">
     <div class="container">
         <h2 class="section-title">How It Works</h2>
-        <p class="section-subtitle">Simple 4-step process to get your tank cleaned</p>
+        <p class="section-subtitle">Book your service in 4 simple steps</p>
         
         <div class="steps-container">
+            <!-- Step 1 -->
             <div class="step-card">
                 <div class="step-number">1</div>
-                <div class="step-icon"><i class="fa-solid fa-calendar-plus"></i></div>
-                <h3>Book Online</h3>
-                <p>Fill the booking form with your details and preferred date/time</p>
+                <div class="step-icon"><i class="fa-solid fa-calendar-check"></i></div>
+                <h3>Book Service</h3>
+                <p>Select your service & book appointment</p>
             </div>
             
             <div class="step-arrow"><i class="fa-solid fa-arrow-right"></i></div>
             
+            <!-- Step 2 -->
             <div class="step-card">
                 <div class="step-number">2</div>
                 <div class="step-icon"><i class="fa-solid fa-phone"></i></div>
-                <h3>Confirmation Call</h3>
-                <p>Our team will call you to confirm the appointment</p>
+                <h3>We Confirm</h3>
+                <p>We verify & share cleaner arrival time</p>
             </div>
             
             <div class="step-arrow"><i class="fa-solid fa-arrow-right"></i></div>
             
+            <!-- Step 3 -->
             <div class="step-card">
                 <div class="step-number">3</div>
-                <div class="step-icon"><i class="fa-solid fa-truck"></i></div>
-                <h3>Team Arrives</h3>
-                <p>Our trained professionals arrive at your location on time</p>
+                <div class="step-icon"><i class="fa-solid fa-user-check"></i></div>
+                <h3>Cleaner Arrives</h3>
+                <p>Our partner reaches & starts work</p>
             </div>
             
             <div class="step-arrow"><i class="fa-solid fa-arrow-right"></i></div>
             
+            <!-- Step 4 -->
             <div class="step-card">
                 <div class="step-number">4</div>
-                <div class="step-icon"><i class="fa-solid fa-check-circle"></i></div>
-                <h3>Job Done!</h3>
-                <p>Tank cleaned, sanitized and ready to use</p>
+                <div class="step-icon"><i class="fa-solid fa-circle-check"></i></div>
+                <h3>Done & Pay</h3>
+                <p>Verify work & make payment</p>
             </div>
         </div>
     </div>
 </section>
-
 <!-- TESTIMONIALS SECTION (NEW) -->
 <section class="testimonials-section">
     <div class="container">
@@ -652,9 +452,10 @@
 
                     <!-- Capacity & Date -->
                     <div class="form-row">
-                        <div class="form-group">
+                        <!-- ID add kiya aur 'required' hata diya taaki dusri service me form aaram se submit ho jaye -->
+                        <div class="form-group" id="capacity-group" style="display: none;">
                             <label>Tank Capacity</label>
-                          <select id="tank-cap" required>
+                          <select id="tank-cap">
     <option value="500 Litres">500 Litres</option>
     <option value="1000 Litres">1000 Litres</option>
     <option value="1500 Litres">1500 Litres</option>
@@ -781,51 +582,252 @@
 
 <!-- CONTACT PAGE -->
 
-        <!-- ADMIN & PARTNER DASHBOARDS (Hidden by default, accessible via footer links) -->
+        <!-- ==========================================
+             VIP ADMIN DASHBOARD (NEW & UPDATED)
+             ========================================== -->
         <section id="admin-panel" class="page-section">
             <div class="page-header admin-header">
-                <h1>Admin Dashboard</h1>
+                <h1>👑 Admin Control Room</h1>
+                <p>Manage bookings, partners, and revenue</p>
             </div>
             <div class="container dashboard-container">
+                
+                <!-- 1. STATS ROW (Total Revenue Added) -->
                 <div class="stats-row">
                     <div class="stat-box"><h3>Upcoming</h3><span id="stat-upcoming">0</span></div>
                     <div class="stat-box"><h3>Ongoing</h3><span id="stat-ongoing">0</span></div>
                     <div class="stat-box"><h3>Completed</h3><span id="stat-completed">0</span></div>
+                    <div class="stat-box" style="border-left: 5px solid #2e7d32; background: #e8f5e9;">
+                        <h3 style="color:#2e7d32;">Total Revenue</h3>
+                        <span id="stat-revenue" style="color:#2e7d32;">₹0</span>
+                    </div>
                 </div>
+
+                <!-- 2. CONTROLS ROW (Search, Filter, Export Excel) -->
+                <div class="admin-controls">
+                    <div class="search-filter-group">
+                        <input type="text" id="admin-search" placeholder="🔍 Search Name or Phone..." onkeyup="renderAdminPanel()">
+                        <select id="admin-filter" onchange="renderAdminPanel()">
+                            <option value="All">All Bookings</option>
+                            <option value="Upcoming">Upcoming</option>
+                            <option value="Ongoing">Ongoing</option>
+                            <option value="Completed">Completed</option>
+                            <option value="Cancelled">Cancelled</option>
+                            <option value="Pending Payment">Pending Payment</option>
+                        </select>
+                    </div>
+                    <button class="btn-export" onclick="exportToExcel()">
+                        <i class="fa-solid fa-file-excel"></i> Export to Excel
+                    </button>
+                </div>
+          
+
+ 
+                <!-- 3. BOOKING TABLE -->
                 <div class="table-responsive">
                     <table class="dashboard-table">
                         <thead>
                             <tr>
                                 <th>ID</th>
                                 <th>Customer</th>
-                                <th>Date</th>
-                                <th>Type</th>
+                                <th>Date & Time</th>
+                                <th>Service</th>
                                 <th>Status</th>
                                 <th>Action</th>
                             </tr>
                         </thead>
                         <tbody id="admin-booking-list">
-                            <!-- Injected by JS -->
+                            <!-- JS yahan data bharega -->
                         </tbody>
                     </table>
                 </div>
             </div>
-        </section>
 
-        <section id="partner-panel" class="page-section">
-            <div class="page-header partner-header">
-                <h1>Partner Interface</h1>
+            <!-- MODAL: View Full Details (A to Z info) -->
+            <div id="view-details-modal" class="admin-modal">
+                <div class="admin-modal-content">
+                    <span class="close-admin-modal" onclick="closeAdminModal('view-details-modal')">&times;</span>
+                    <h2 style="color: #1C3F78; margin-bottom: 15px;"><i class="fa-solid fa-clipboard-list"></i> Full Booking Details</h2>
+                    <div id="full-details-body" class="details-grid">
+                        <!-- JS yahan details bharega -->
+                    </div>
+                </div>
             </div>
-            <div class="container dashboard-container">
-                <h2>Your Assigned Jobs</h2>
-                <div class="job-cards-list" id="partner-job-list">
-                    <!-- Injected by JS -->
+
+            <!-- MODAL: Assign Partner (Staff Name) -->
+            <div id="assign-partner-modal" class="admin-modal">
+                <div class="admin-modal-content" style="max-width: 400px;">
+                    <span class="close-admin-modal" onclick="closeAdminModal('assign-partner-modal')">&times;</span>
+                    <h2 style="color: #1C3F78; margin-bottom: 15px;"><i class="fa-solid fa-user-helmet-safety"></i> Assign Partner</h2>
+                    <p style="margin-bottom: 10px;">Select a cleaning expert for this job:</p>
+                    <select id="partner-select-dropdown" class="full-width-select">
+                        <option value="Raju (Expert)">Raju (Expert)</option>
+                        <option value="Suresh (Senior)">Suresh (Senior)</option>
+                        <option value="Mahesh (Junior)">Mahesh (Junior)</option>
+                        <option value="Amit (Team Lead)">Amit (Team Lead)</option>
+                    </select>
+                    <input type="hidden" id="assign-booking-id">
+                    <button class="btn-primary" style="width:100%; margin-top:20px; font-size:1.1rem;" onclick="confirmAssignPartner()">Assign Job Now</button>
                 </div>
             </div>
         </section>
 
-    </main>
+        <!-- PARTNER PANEL - COMPLETE NEW DESIGN -->
+<section id="partner-panel" class="page-section">
+    <div class="page-header partner-header">
+        <h1>👷 Partner Dashboard</h1>
+        <p>Manage your jobs and track earnings</p>
+    </div>
+    
+    <div class="container dashboard-container">
+        
+        <!-- Partner Stats Row -->
+        <div class="partner-stats-row">
+            <div class="partner-stat-box">
+                <h4><i class="fa-solid fa-clock"></i> Today's Jobs</h4>
+                <div class="stat-value" id="partner-stat-today">0</div>
+            </div>
+            <div class="partner-stat-box">
+                <h4><i class="fa-solid fa-check-circle"></i> Completed</h4>
+                <div class="stat-value" id="partner-stat-completed">0</div>
+            </div>
+            <div class="partner-stat-box">
+                <h4><i class="fa-solid fa-money-bill"></i> Cash Collected</h4>
+                <div class="stat-value" id="partner-stat-cash">₹0</div>
+            </div>
+            <div class="partner-stat-box earnings">
+                <h4><i class="fa-solid fa-wallet"></i> Total Earnings</h4>
+                <div class="stat-value" id="partner-stat-earnings">₹0</div>
+            </div>
+        </div>
+        
+        <!-- Tabs Navigation -->
+        <div class="partner-tabs">
+            <button class="partner-tab active" onclick="switchPartnerTab('upcoming')">
+                <i class="fa-solid fa-calendar"></i> Upcoming
+                <span class="tab-count" id="tab-count-upcoming">0</span>
+            </button>
+            <button class="partner-tab" onclick="switchPartnerTab('ongoing')">
+                <i class="fa-solid fa-spinner"></i> Ongoing
+                <span class="tab-count" id="tab-count-ongoing">0</span>
+            </button>
+            <button class="partner-tab" onclick="switchPartnerTab('pending')">
+                <i class="fa-solid fa-hourglass-half"></i> Pending Payment
+                <span class="tab-count" id="tab-count-pending">0</span>
+            </button>
+            <button class="partner-tab" onclick="switchPartnerTab('completed')">
+                <i class="fa-solid fa-check-double"></i> Completed
+                <span class="tab-count" id="tab-count-completed">0</span>
+            </button>
+        </div>
+        
+        <!-- Tab Content - Jobs List -->
+        <div id="partner-job-list">
+            <!-- JS will inject job cards here -->
+        </div>
+        
+    </div>
+</section>
+<!-- =============================================
+     GLOBAL MODALS - YE HAMESHA KAAM KARENGE
+     ============================================= -->
 
+<!-- MODAL: Billing & Payment - NEW DESIGN -->
+<div id="billing-modal" class="admin-modal">
+    <div class="admin-modal-content" style="max-width: 500px;">
+        <span class="close-admin-modal" onclick="closeAdminModal('billing-modal')">&times;</span>
+        
+        <h2 style="color: #1C3F78; text-align: center; margin-bottom: 20px;">
+            <i class="fa-solid fa-file-invoice-dollar"></i> Bill & Payment
+        </h2>
+        
+        <!-- Bill Summary -->
+        <div id="bill-summary" style="background:#f0f8ff; border: 2px dashed #46BCC6; padding:20px; border-radius:10px; text-align: center; margin-bottom: 20px;">
+            <!-- JS yahan details bharega -->
+        </div>
+
+        <!-- Send Bill to WhatsApp -->
+        <div style="background: #f9f9f9; padding: 15px; border-radius: 8px; margin-bottom: 20px;">
+            <label style="font-size: 0.9rem; font-weight: bold; color: #1C3F78; display: block; margin-bottom: 10px;">
+                <i class="fa-brands fa-whatsapp" style="color: #25d366;"></i> Send Bill to Customer:
+            </label>
+            <div style="display: flex; gap: 10px;">
+                <input type="tel" id="bill-cust-phone" class="full-width-select" style="flex: 1; padding: 12px;" placeholder="Customer Mobile Number">
+                <button class="btn-primary" style="background: #25d366; border:none; padding: 0 20px; font-weight: bold;" onclick="sendWhatsAppBill()">
+                    <i class="fa-solid fa-paper-plane"></i> Send
+                </button>
+            </div>
+        </div>
+
+        <!-- Payment Method Selection -->
+        <h3 style="text-align: center; color: #333; margin-bottom: 15px;">
+            <i class="fa-solid fa-hand-holding-dollar"></i> How did customer pay?
+        </h3>
+
+        <div class="billing-buttons-row">
+            <!-- Cash Payment Button -->
+            <button class="btn-cash" onclick="collectCashPayment()">
+                <i class="fa-solid fa-money-bill-wave"></i>
+                <span>CASH</span>
+                <small style="font-weight: normal; font-size: 0.75rem;">Collected in Hand</small>
+            </button>
+            
+            <!-- Online Payment Button -->
+            <button class="btn-online" onclick="confirmOnlinePayment()">
+                <i class="fa-solid fa-mobile-screen-button"></i>
+                <span>ONLINE</span>
+                <small style="font-weight: normal; font-size: 0.75rem;">UPI / GPay / PhonePe</small>
+            </button>
+        </div>
+
+        <!-- UPI Details (for reference) -->
+        <div style="margin-top: 20px; background: #e3f2fd; padding: 15px; border-radius: 8px; text-align: center;">
+            <p style="font-size: 0.85rem; color: #1565c0; margin-bottom: 10px;">
+                <i class="fa-solid fa-qrcode"></i> Customer Online Payment Details:
+            </p>
+            <img id="upi-qr-code" src="" alt="UPI QR" style="width: 120px; height: 120px; border: 2px solid #fff; border-radius: 8px; margin-bottom: 10px;">
+            <p style="font-weight: bold; color: #1565c0; font-size: 0.9rem;">UPI ID: 9652229160-2@ibl</p>
+        </div>
+
+        <input type="hidden" id="billing-job-id">
+    </div>
+</div>
+
+        <hr style="border: 0.5px solid #eee; margin: 15px 0;">
+
+        <!-- Send WhatsApp Receipt -->
+        <div style="margin-bottom: 15px;">
+            <label style="font-size: 0.9rem; font-weight: bold; color: #1C3F78;">Send Receipt to Customer:</label>
+            <div style="display: flex; gap: 10px; margin-top: 5px;">
+                <input type="tel" id="bill-cust-phone" class="full-width-select" style="flex: 1; padding: 10px;" placeholder="Customer Number">
+                <button class="btn-primary" style="background: #25d366; border:none; padding: 0 15px; font-weight: bold;" onclick="sendWhatsAppBill()"><i class="fa-brands fa-whatsapp" style="font-size: 1.2rem;"></i> Send Bill</button>
+            </div>
+            <small style="color: #888;">Sends a digital bill for both Cash & Online payments.</small>
+        </div>
+
+        <!-- Final Complete Button -->
+        <button class="btn-primary" style="width:100%; font-size:1.1rem; background: #2e7d32; padding: 15px; box-shadow: 0 5px 15px rgba(46, 125, 50, 0.4);" onclick="finalizeJobAndPayment()">
+            <i class="fa-solid fa-check-double"></i> Payment Received & Close Job
+        </button>
+        <input type="hidden" id="billing-job-id">
+    </div>
+</div>
+
+<!-- MODAL: Partner Login -->
+<div id="partner-login-modal" class="admin-modal">
+    <div class="admin-modal-content" style="max-width: 400px; text-align: center;">
+        <span class="close-admin-modal" onclick="closeAdminModal('partner-login-modal')">&times;</span>
+        <h2 style="color: #1C3F78; margin-bottom: 15px;"><i class="fa-solid fa-right-to-bracket"></i> Partner Login</h2>
+        <p style="margin-bottom: 15px;">Select your profile to view your assigned jobs:</p>
+        <select id="login-partner-name" class="full-width-select" style="margin-bottom: 20px;">
+            <option value="Raju (Expert)">Raju (Expert)</option>
+            <option value="Suresh (Senior)">Suresh (Senior)</option>
+            <option value="Mahesh (Junior)">Mahesh (Junior)</option>
+            <option value="Amit (Team Lead)">Amit (Team Lead)</option>
+        </select>
+        <button class="btn-primary" style="width:100%; font-size:1.1rem;" onclick="loginAsPartner()">Enter Dashboard</button>
+    </div>
+</div>
    <!-- NEW PROFESSIONAL FOOTER -->
 <footer class="footer-uds">
     <div class="footer-main">
@@ -883,7 +885,7 @@
         <p>&copy; 2026 DUST Out. All Rights Reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
     </div>
 </footer>
-
+ 
     <script src="script.js"></script>
 </body>
 </html>

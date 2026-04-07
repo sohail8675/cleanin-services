@@ -473,6 +473,9 @@ input:focus, select:focus, textarea:focus {
 .status-upcoming { background: #e3f2fd; color: #1565c0; }
 .status-ongoing { background: #fff3e0; color: #ef6c00; }
 .status-completed { background: #e8f5e9; color: #2e7d32; }
+.status-pending { background: #fff8e1; color: #f57c00; }
+.status-payment { background: #fff8e1; color: #f57c00; }
+.status-pending-payment { background: #fff8e1; color: #f57c00; }
 .btn-action {
     padding: 5px 10px;
     background: var(--primary-blue);
@@ -1070,10 +1073,10 @@ footer {
 }
 
 .hero-text h1 {
-    font-size: 3.5rem;
+    font-size: 2.6rem; /* Size chhota aur perfect kar diya */
     font-weight: 700;
-    line-height: 1.2;
-    margin-bottom: 25px;
+    line-height: 1.3; /* Lines ke beech thoda space badha diya */
+    margin-bottom: 20px;
     font-family: var(--font-heading);
 }
 
@@ -1160,54 +1163,54 @@ footer {
     justify-content: center;
 }
 
-/* Hero section mein jo logo lagaya hai usko style kiya */
 .hero-image > img {
     width: 100%;
-    max-width: 450px; /* Size adjust kiya */
-    border-radius: 25px; /* Thoda aur gol kinara */
-    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4);
-    background: #ffffff; /* Logo ke peeche white background */
-    padding: 20px; /* Logo ke aas paas thodi space */
-    border: 5px solid var(--accent-cyan); /* Logo ke color ka border */
+    max-width: 550px;
+    background: transparent; 
+    border: none; 
+    /* Box aur radius hata diya. Ab drop-shadow lagaya hai jo sirf aadmi ki parchai banayega, dabbe ki nahi! */
+    filter: drop-shadow(0 20px 30px rgba(0, 0, 0, 0.4)); 
 }
-
+/* COMPACT FLOATING CARDS */
 .floating-card {
     position: absolute;
     background: #fff;
-    padding: 15px 20px;
-    border-radius: 12px;
+    padding: 10px 15px; /* Padding kam ki */
+    border-radius: 10px; /* Kinare thode chhote kiye */
     display: flex;
     align-items: center;
-    gap: 12px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    gap: 10px; /* Icon aur text ke beech ka gap kam kiya */
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15); /* Shadow thodi soft ki */
     animation: float 3s ease-in-out infinite;
 }
 
 .floating-card i {
-    font-size: 1.5rem;
+    font-size: 1.2rem; /* Icon chhota kiya */
     color: #f59e0b;
 }
 
 .floating-card strong {
     display: block;
-    font-size: 1.2rem;
+    font-size: 0.9rem; /* Main Text chhota kiya */
     color: #0a192f;
+    white-space: nowrap;
 }
 
 .floating-card small {
     color: #666;
-    font-size: 0.8rem;
+    font-size: 0.75rem; /* Sub-text chhota kiya */
+    white-space: nowrap;
 }
-
 .card-1 {
-    top: 20%;
-    left: -20px;
+    top: 35%;  /* Thoda neeche kiya */
+    left: -70px; /* Left side bahar nikala */
+    z-index: 10;
 }
-
 .card-2 {
-    bottom: 20%;
-    right: -20px;
+    bottom: 15%; /* Bottom mein set kiya */
+    right: -50px; /* Right side bahar nikala */
     animation-delay: 1.5s;
+    z-index: 10;
 }
 
 @keyframes float {
@@ -1881,4 +1884,494 @@ footer {
     .detail-info { padding: 25px; }
     .detail-header { flex-direction: column; gap: 15px; }
     .detail-price { align-items: flex-start; }
+}
+/* Naya DUST Out Brand Name Styling */
+.hero-brand-name {
+    font-size: rem; /* Main headline (2.6rem) se thoda chhota */
+    color: #64ffda; /* Cyan color jo theme ke sath match karega */
+    font-family: var(--font-heading);
+    font-weight: 800;
+    letter-spacing: 2px; /* Thoda gap letters ke beech premium look ke liye */
+    text-transform: uppercase;
+    margin-top: -15px; /* Thoda upar khiskaya taaki paragraph ke sath juda rahe */
+    margin-bottom: 35px; /* Buttons se thodi doori */
+    text-shadow: 0 0 10px rgba(100, 255, 218, 0.3); /* Halka sa glow effect */
+}
+/* ==========================================
+   👑 VIP ADMIN DASHBOARD STYLES (NEW)
+   ========================================== */
+
+/* 1. Admin Controls (Search, Filter, Excel Button) */
+.admin-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+    flex-wrap: wrap;
+    gap: 15px;
+    background: #fff;
+    padding: 15px 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+.search-filter-group {
+    display: flex;
+    gap: 15px;
+    flex: 1;
+}
+#admin-search {
+    flex: 1;
+    max-width: 350px;
+    padding: 10px 15px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 0.95rem;
+}
+#admin-filter {
+    padding: 10px 15px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    background: white;
+    cursor: pointer;
+    font-size: 0.95rem;
+}
+.btn-export {
+    background: #28a745;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 6px;
+    font-weight: 700;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.3s;
+    font-size: 1rem;
+}
+.btn-export:hover {
+    background: #218838;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(40, 167, 69, 0.4);
+}
+
+/* 2. Modals (Pop-ups for Details & Partner) */
+.admin-modal {
+    display: none; 
+    position: fixed;
+    z-index: 3000; 
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(10, 25, 47, 0.8);
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(5px);
+}
+.admin-modal-content {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    width: 90%;
+    max-width: 650px;
+    position: relative;
+    animation: popIn 0.3s ease-out;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+}
+.close-admin-modal {
+    color: #aaa;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.close-admin-modal:hover { color: #d9534f; }
+
+/* 3. Details Grid (A to Z Info Box) */
+.details-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-top: 20px;
+}
+.detail-item {
+    background: #f8fafc;
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid #e2e8f0;
+}
+.detail-label {
+    font-size: 0.85rem;
+    color: #64748b;
+    margin-bottom: 5px;
+    display: block;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+.detail-value {
+    font-size: 1rem;
+    color: #0f172a;
+    font-weight: 600;
+    word-break: break-word;
+}
+
+/* 4. Action Buttons (View, Cancel, Assign) */
+.action-buttons {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+.btn-view {
+    background: #17a2b8; color: white; border: none; padding: 6px 12px; border-radius: 4px; cursor: pointer; font-size: 0.85rem; font-weight: 600; transition: 0.2s;
+}
+.btn-view:hover { background: #138496; }
+.btn-cancel {
+    background: #dc3545; color: white; border: none; padding: 6px 12px; border-radius: 4px; cursor: pointer; font-size: 0.85rem; font-weight: 600; transition: 0.2s;
+}
+.btn-cancel:hover { background: #c82333; }
+.btn-assign {
+    background: #f59e0b; color: #000; border: none; padding: 6px 12px; border-radius: 4px; cursor: pointer; font-size: 0.85rem; font-weight: 700; transition: 0.2s;
+}
+.btn-assign:hover { background: #d97706; }
+
+/* Cancelled Status Badge */
+.status-cancelled {
+    background: #ffebee;
+    color: #c62828;
+}
+.full-width-select {
+    width: 100%; padding: 12px; border: 2px solid #ccc; border-radius: 6px; font-size: 1rem; font-weight: 500;
+}
+.full-width-select:focus { border-color: var(--accent-blue); outline: none; }
+
+@media (max-width: 768px) {
+    .details-grid { grid-template-columns: 1fr; }
+    .stats-row { flex-wrap: wrap; }
+    .stat-box { min-width: 45%; }
+}
+/* ==========================================
+   ✨ PREMIUM UI POLISH PACK (SMALL UPDATES)
+   ========================================== */
+
+/* 1. SMOOTH SCROLLING */
+html {
+    scroll-behavior: smooth;
+}
+
+/* 2. VIP CUSTOM SCROLLBAR */
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-track {
+    background: #f4f8fb; /* Website background color */
+}
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, #46BCC6, #1C3F78); /* Aapka Brand Color */
+    border-radius: 10px;
+    border: 2px solid #f4f8fb;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #1C3F78; /* Hover par dark ho jayega */
+}
+
+/* 3. BRAND TEXT SELECTION */
+::selection {
+    background-color: #46BCC6; /* Cyan color */
+    color: #0a192f; /* Dark Blue Text */
+}
+
+/* 4. 3D HOVER EFFECTS FOR CARDS */
+.service-card, .equip-card, .step-card {
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* Bouncy smooth effect */
+}
+.service-card:hover, .equip-card:hover, .step-card:hover {
+    transform: translateY(-10px) scale(1.02); /* Thoda upar aur bada hoga */
+    box-shadow: 0 20px 40px rgba(28, 63, 120, 0.15); /* Premium shadow */
+    border-color: #46BCC6; /* Border cyan ho jayegi */
+}
+
+/* 5. INPUT FIELDS FOCUS GLOW */
+input:focus, select:focus, textarea:focus {
+    box-shadow: 0 0 0 3px rgba(70, 188, 198, 0.2); /* Form me type karte waqt bahar glow karega */
+}
+/* ==========================================
+   💰 NEW BILLING & PARTNER DASHBOARD STYLES
+   ========================================== */
+
+/* --- Partner Dashboard Tabs --- */
+.partner-tabs {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 25px;
+    flex-wrap: wrap;
+    background: #fff;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.partner-tab {
+    padding: 12px 25px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    background: #f8f9fa;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: all 0.3s;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.partner-tab:hover {
+    border-color: var(--accent-blue);
+    background: #e6f7ff;
+}
+
+.partner-tab.active {
+    background: var(--primary-blue);
+    color: #fff;
+    border-color: var(--primary-blue);
+}
+
+.partner-tab .tab-count {
+    background: rgba(255,255,255,0.2);
+    padding: 2px 8px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+}
+
+.partner-tab.active .tab-count {
+    background: rgba(255,255,255,0.3);
+}
+
+/* --- Payment Method Badges --- */
+.payment-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 700;
+}
+
+.payment-cash {
+    background: #e8f5e9;
+    color: #2e7d32;
+    border: 1px solid #a5d6a7;
+}
+
+.payment-online {
+    background: #e3f2fd;
+    color: #1565c0;
+    border: 1px solid #90caf9;
+}
+
+.payment-pending {
+    background: #fff8e1;
+    color: #f57c00;
+    border: 1px solid #ffcc80;
+}
+
+/* --- Billing Modal Buttons --- */
+.billing-buttons-row {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.btn-cash {
+    flex: 1;
+    padding: 18px 20px;
+    background: linear-gradient(135deg, #2e7d32, #43a047);
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    transition: all 0.3s;
+    box-shadow: 0 5px 15px rgba(46, 125, 50, 0.3);
+}
+
+.btn-cash:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(46, 125, 50, 0.4);
+}
+
+.btn-cash i {
+    font-size: 1.5rem;
+}
+
+.btn-online {
+    flex: 1;
+    padding: 18px 20px;
+    background: linear-gradient(135deg, #1565c0, #1976d2);
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    transition: all 0.3s;
+    box-shadow: 0 5px 15px rgba(21, 101, 192, 0.3);
+}
+
+.btn-online:hover:not(:disabled) {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(21, 101, 192, 0.4);
+}
+
+.btn-online:disabled {
+    background: #bdbdbd;
+    cursor: not-allowed;
+    box-shadow: none;
+    opacity: 0.7;
+}
+
+.btn-online i {
+    font-size: 1.5rem;
+}
+
+/* --- Job History Cards --- */
+.history-card {
+    background: #fff;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 15px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+    border-left: 5px solid #2e7d32;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.history-card.cash-paid {
+    border-left-color: #2e7d32;
+}
+
+.history-card.online-paid {
+    border-left-color: #1565c0;
+}
+
+.history-info h4 {
+    color: var(--primary-blue);
+    margin-bottom: 5px;
+    font-size: 1rem;
+}
+
+.history-info p {
+    color: #666;
+    font-size: 0.85rem;
+    margin-bottom: 3px;
+}
+
+.history-amount {
+    text-align: right;
+}
+
+.history-amount .amount {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--primary-blue);
+}
+
+/* --- Stats Summary Box --- */
+.partner-stats-row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.partner-stat-box {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.partner-stat-box h4 {
+    color: #666;
+    font-size: 0.85rem;
+    margin-bottom: 8px;
+}
+
+.partner-stat-box .stat-value {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--primary-blue);
+}
+
+.partner-stat-box.earnings .stat-value {
+    color: #2e7d32;
+}
+
+/* --- Empty State --- */
+.empty-state {
+    text-align: center;
+    padding: 50px 20px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.empty-state i {
+    font-size: 3rem;
+    color: #ccc;
+    margin-bottom: 15px;
+}
+
+.empty-state h3 {
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.empty-state p {
+    color: #999;
+}
+
+/* --- Responsive --- */
+@media (max-width: 768px) {
+    .partner-tabs {
+        flex-direction: column;
+    }
+    
+    .partner-tab {
+        justify-content: center;
+    }
+    
+    .partner-stats-row {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .billing-buttons-row {
+        flex-direction: column;
+    }
+    
+    .history-card {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .history-amount {
+        text-align: center;
+    }
 }
